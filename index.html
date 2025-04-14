@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ホームページ</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer@^3.4.0/dist/model-viewer.min.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <div class="model-container">
+    <model-viewer
+      src="/img/test.glb"
+      alt="テスト"
+      auto-rotate
+      camera-controls
+      shadow-intensity="1"
+      camera-orbit="45deg 55deg 2.5m"
+      min-camera-orbit="auto auto 0.1m"
+      max-camera-orbit="auto auto 10m"
+      exposure="1"
+      environment-image="neutral"
+      loading="eager"
+      onerror="console.error('モデルの読み込みに失敗しました:', event)"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="fixed"
+      ar-placement="floor"
+      interaction-prompt="auto"
+      interaction-prompt-style="basic"
+      interaction-prompt-threshold="0"
+    ></model-viewer>
+  </div>
+
+</body>
+</html>
